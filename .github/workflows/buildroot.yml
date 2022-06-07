@@ -7,6 +7,6 @@ jobs:
       - name: Checking out our code
         uses: actions/checkout@master
       - name: Install Deps
-        run: apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y install --no-install-recommends sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc wget libncurses-dev
+        run: sudo apt-get update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get -y install --no-install-recommends sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc wget libncurses-dev
       - name: Run Build
         run: make
