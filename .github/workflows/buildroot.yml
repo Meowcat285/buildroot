@@ -10,8 +10,8 @@ jobs:
         id: cache-build-files
         uses: actions/cache@v3
         with:
-          path: output/build
-          key: ${{ runner.os }}-buildfiles-
+          path: output
+          key: ${{ runner.os }}-buildfiles-v2-
       - name: Install Deps
         run: sudo apt-get update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get -y install --no-install-recommends sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc wget libncurses-dev
       - name: Run Build
